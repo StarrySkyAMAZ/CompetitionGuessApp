@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/music"
+        android:title="修改Bgm" />
+    <item
+        android:id="@+id/music2"
+        android:title="停止音乐" />
+    <item
+        android:id="@+id/music3"
+        android:title="重新播放音乐" />
+</menu>

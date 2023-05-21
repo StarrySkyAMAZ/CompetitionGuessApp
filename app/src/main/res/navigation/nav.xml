@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.duhonglin.competitionguessapp.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_teamListFragment"
+            app:destination="@id/teamListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamListFragment"
+        android:name="com.duhonglin.competitionguessapp.fragments.TeamListFragment"
+        android:label="fragment_team_list"
+        tools:layout="@layout/fragment_team_list" >
+        <action
+            android:id="@+id/action_teamListFragment_to_matchFragment"
+            app:destination="@id/matchFragment" />
+        <action
+            android:id="@+id/action_teamListFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_teamListFragment_to_changeFragment"
+            app:destination="@id/changeFragment" />
+        <action
+            android:id="@+id/action_teamListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.duhonglin.competitionguessapp.fragments.MatchFragment"
+        android:label="fragment_match"
+        tools:layout="@layout/fragment_match" >
+        <action
+            android:id="@+id/action_matchFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="Team"
+            app:argType="com.duhonglin.competitionguessapp.data.models.Team[]" />
+        <action
+            android:id="@+id/action_matchFragment_to_teamListFragment"
+            app:destination="@id/teamListFragment" />
+        <action
+            android:id="@+id/action_matchFragment_to_championFragment"
+            app:destination="@id/championFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.duhonglin.competitionguessapp.fragments.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_teamListFragment"
+            app:destination="@id/teamListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeFragment"
+        android:name="com.duhonglin.competitionguessapp.fragments.ChangeFragment"
+        android:label="fragment_change"
+        tools:layout="@layout/fragment_change" >
+        <action
+            android:id="@+id/action_changeFragment_to_teamListFragment"
+            app:destination="@id/teamListFragment" />
+        <argument android:name="NewTeam"
+            app:argType="com.duhonglin.competitionguessapp.data.models.Team" />
+    </fragment>
+    <fragment
+        android:id="@+id/championFragment"
+        android:name="com.duhonglin.competitionguessapp.fragments.ChampionFragment"
+        android:label="fragment_champion"
+        tools:layout="@layout/fragment_champion" >
+        <action
+            android:id="@+id/action_championFragment_to_teamListFragment"
+            app:destination="@id/teamListFragment" />
+        <argument
+            android:name="champion"
+            app:argType="com.duhonglin.competitionguessapp.data.models.Team" />
+        <action
+            android:id="@+id/action_championFragment_to_matchFragment"
+            app:destination="@id/matchFragment" />
+    </fragment>
+</navigation>
