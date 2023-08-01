@@ -28,24 +28,15 @@
         <action
             android:id="@+id/action_teamListFragment_to_changeFragment"
             app:destination="@id/changeFragment" />
-        <action
-            android:id="@+id/action_teamListFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/matchFragment"
         android:name="com.duhonglin.competitionguessapp.fragments.MatchFragment"
         android:label="fragment_match"
         tools:layout="@layout/fragment_match" >
-        <action
-            android:id="@+id/action_matchFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
         <argument
             android:name="Team"
             app:argType="com.duhonglin.competitionguessapp.data.models.Team[]" />
-        <action
-            android:id="@+id/action_matchFragment_to_teamListFragment"
-            app:destination="@id/teamListFragment" />
         <action
             android:id="@+id/action_matchFragment_to_championFragment"
             app:destination="@id/championFragment" />
@@ -81,8 +72,5 @@
         <argument
             android:name="champion"
             app:argType="com.duhonglin.competitionguessapp.data.models.Team" />
-        <action
-            android:id="@+id/action_championFragment_to_matchFragment"
-            app:destination="@id/matchFragment" />
     </fragment>
 </navigation>

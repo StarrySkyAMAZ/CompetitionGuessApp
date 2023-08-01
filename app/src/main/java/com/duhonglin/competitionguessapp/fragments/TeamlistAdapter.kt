@@ -66,9 +66,8 @@ class TeamlistAdapter(val context: Context): RecyclerView.Adapter<TeamlistAdapte
     // 绑定ViewHolder对象和数据，调用bind方法来更新每个列表项的视图
     override fun onBindViewHolder(holder: TeamViewHolder, position: Int) {
         val team = teams[position]
-        holder.itemView.setOnLongClickListener{
+        holder.itemView.setOnClickListener{
             holder.itemView.findNavController().navigate(TeamListFragmentDirections.actionTeamListFragmentToChangeFragment(team))
-            true
         }
         holder.bind(team)
     }

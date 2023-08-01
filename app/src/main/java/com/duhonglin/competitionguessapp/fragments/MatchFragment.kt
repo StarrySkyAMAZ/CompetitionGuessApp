@@ -102,13 +102,11 @@ class MatchFragment : Fragment() {
             updateMatchView() // 更新对阵图显示
             binding.textView.text="Next Game Start"
         }
-        if (newround.toDouble() == log2(teams.size.toDouble())+1){
+        else if (newround.toDouble() == log2(teams.size.toDouble())+1){
             Toast.makeText(requireContext(), "冠军已产生", Toast.LENGTH_SHORT).show()
-            newround++
-        }
-        if (newround.toDouble() > log2(teams.size.toDouble())+1) {
             val action = MatchFragmentDirections.actionMatchFragmentToChampionFragment(getChampion())
             findNavController().navigate(action)
+
         }
     }
 
